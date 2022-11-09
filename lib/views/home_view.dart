@@ -1,3 +1,5 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:shimmer_example/models/helper_model.dart';
@@ -19,6 +21,34 @@ class _HomeViewState extends State<HomeView> {
         title: const Text("Shimmer Loading Animation"),
         centerTitle: true,
         backgroundColor: Colors.cyan,
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {},
+        ),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.white,
+        color: Colors.cyan,
+        items: const [
+          Icon(
+            CupertinoIcons.home,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            CupertinoIcons.add,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            CupertinoIcons.person_fill,
+            size: 30,
+            color: Colors.white,
+          ),
+        ],
+        onTap: (index) {
+          //Handle button tap
+        },
       ),
       body: FutureBuilder(
         future: UsersApiService.getUsers(),
