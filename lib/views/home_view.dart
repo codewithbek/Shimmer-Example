@@ -42,6 +42,7 @@ class _HomeViewState extends State<HomeView> {
                   child: Row(
                     children: [
                       CircleAvatar(
+                        backgroundColor: Colors.grey.shade300,
                         backgroundImage:
                             NetworkImage(snapshot.data!.data[index].img),
                         radius: 30,
