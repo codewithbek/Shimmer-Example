@@ -18,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Shimmer Loading Animation"),
+        title: const Text("@CodeWithBek"),
         centerTitle: true,
         backgroundColor: Colors.cyan,
         leading: IconButton(
