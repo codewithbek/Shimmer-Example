@@ -1,16 +1,19 @@
 class UserModel {
-  UserModel(
-      {required this.id,
-      required this.email,
-      required this.firstName,
-      required this.lastName,
-      required this.img});
+  UserModel({
+    required this.id,
+    required this.email,
+    required this.firstName,
+    required this.lastName,
+    required this.img,
+    this.isFollowedByMe,
+  });
 
   final int id;
   final String email;
   final String firstName;
   final String lastName;
   final String img;
+  bool? isFollowedByMe;
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
